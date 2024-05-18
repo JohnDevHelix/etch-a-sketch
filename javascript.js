@@ -6,12 +6,16 @@ const mainDiv = document.createElement("div");
 mainDiv.classList.add("main-div");
 const container = document.querySelector(".container");
 container.appendChild(mainDiv);
-
+let numberOfGrid = 16;
 const gridDiv = document.createElement("div");
 gridDiv.classList.add("grid-div");
+gridDiv.style.height = 600/numberOfGrid + "px";
+gridDiv.style.width = 600/numberOfGrid + "px";
 
 
-for ( i = 1; i<=256; i++ ) {
+
+
+for ( i = 1; i<=(numberOfGrid ** 2); i++ ) {
 mainDiv.appendChild(gridDiv.cloneNode(true));
   }
 
