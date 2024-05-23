@@ -31,7 +31,7 @@ h1 {
 .main-div {
   display: flex;
   flex-wrap: wrap;
-  border: 5px ridge #222831;
+  border: 8px ridge #222831;
   width: 600px;
   height: 600px;
   margin-top: 2rem;
@@ -45,7 +45,7 @@ h1 {
 .custom-grid {
   display: flex;
   flex-wrap: wrap;
-  border: 5px ridge #222831;
+  border: 8px ridge #222831;
   width: 600px;
   height: auto;
   margin-top: 2rem;
