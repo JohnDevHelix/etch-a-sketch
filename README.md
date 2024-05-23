@@ -4,4 +4,4 @@ User can change grid size up to 100x100.
 
 In this project, I was able to apply what I've learned so far on how to manipulate elements and use other resources such as Google to make sure that my project will work as intended.
 
-Created multiple divs using appendChild in a for loop. Added styles to elements and used hover event.
+Created multiple divs using appendChild in a for loop. Added styles to elements and used hover event. Created progressing darkening effect by manipulating div style background color's opacity.
