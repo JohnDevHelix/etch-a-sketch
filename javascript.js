@@ -36,29 +36,35 @@ buttons.forEach((button) => {
     if (selectedButton === "new-grid") {
       let newGrid = prompt("Enter your preferred grid size (1-100 only)");
 
-      if ((newGrid > 100 || newGrid == 0) && newGrid != null) {
+      if (newGrid <= 100 && newGrid != 0 && newGrid != null) {
+        mainDiv.innerHTML = " ";
+        gridDiv.style.height = 600 / newGrid + "px";
+        gridDiv.style.width = 600 / newGrid + "px";
+
+        for (i = 1; i <= newGrid ** 2; i++) {
+          mainDiv.appendChild(gridDiv.cloneNode(true));
+        }
+
+        mouseOver();
+      } else if ((newGrid > 100 || newGrid == 0) && newGrid != null) {
         alert("Invalid grid size. Enter 1-100 only.");
 
         let newPrompt = prompt("Enter your preferred grid size (1-100 only)");
 
         if ((newPrompt > 100 || newPrompt == 0) && newPrompt != null) {
-          alert("Invalid grid size. Try Again!");
-        } else if (newPrompt != null) {
+          alert("Invalid grid size. Try again!");
+        } else if (newPrompt <= 100 && newPrompt != 0 && newPrompt != null) {
           mainDiv.innerHTML = " ";
           gridDiv.style.height = 600 / newPrompt + "px";
           gridDiv.style.width = 600 / newPrompt + "px";
+
+          for (i = 1; i <= newPrompt ** 2; i++) {
+            mainDiv.appendChild(gridDiv.cloneNode(true));
+          }
+
+          mouseOver();
         }
-      } else if (newGrid != null) {
-        mainDiv.innerHTML = " ";
-        gridDiv.style.height = 600 / newGrid + "px";
-        gridDiv.style.width = 600 / newGrid + "px";
       }
-
-      for (i = 1; i <= newGrid ** 2; i++) {
-        mainDiv.appendChild(gridDiv.cloneNode(true));
-      }
-
-      mouseOver();
     } else {
       const gridSize = 600 / parseFloat(gridDiv.style.height);
       mainDiv.innerHTML = " ";
